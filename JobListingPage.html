@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .job-panel {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      padding: 24px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .controls input,
+    .controls button {
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #d1d8e0;
+      font-size: 15px;
+    }
+    .controls input {
+      flex: 1;
+      min-width: 220px;
+    }
+    .controls button {
+      background: #3f7dff;
+      color: #fff;
+      border-color: transparent;
+      cursor: pointer;
+    }
+    .controls button:hover {
+      background: #366ce1;
+    }
+    .job-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+    .job-card {
+      border: 1px solid #e0e6ef;
+      border-radius: 10px;
+      padding: 18px;
+      background: #fff;
+    }
+    .job-card h3 {
+      margin: 0 0 6px;
+    }
+    .job-card .meta {
+      color: #6b7280;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .job-card p {
+      margin: 0 0 12px;
+      line-height: 1.6;
+    }
+    .job-card button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background: #10b981;
+      color: #fff;
+      cursor: pointer;
+    }
+    .job-card button:hover {
+      background: #0f9b75;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+    .modal.hidden { display: none; }
+    .modal-content {
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+    }
+    .modal-content h2 {
+      margin-top: 0;
+    }
+    .modal-content label {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    .modal-content input,
+    .modal-content textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      border: 1px solid #d1d8e0;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .modal-content textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 18px;
+    }
+    .modal-actions button {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .modal-actions .cancel {
+      background: #e5e7eb;
+      color: #111827;
+    }
+    .modal-actions .save {
+      background: #3f7dff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Talentify Job Listings</h1>
+    <p>Browse open positions and add new jobs to the list.</p>
+  </header>
+
+  <section class="job-panel">
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search jobs by title, company or location" />
+      <button id="addJobButton">Add Job</button>
+    </div>
+    <ul id="jobList" class="job-list"></ul>
+  </section>
+
+  <div id="newJobForm" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add New Job</h2>
+      <label>
+        Job Title
+        <input id="jobTitle" type="text" placeholder="Frontend Developer" />
+      </label>
+      <label>
+        Company
+        <input id="jobCompany" type="text" placeholder="Talentify" />
+      </label>
+      <label>
+        Location
+        <input id="jobLocation" type="text" placeholder="Remote" />
+      </label>
+      <label>
+        Description
+        <textarea id="jobDescription" placeholder="Write a short job description..."></textarea>
+      </label>
+      <div class="modal-actions">
+        <button id="cancelAdd" class="cancel" type="button">Cancel</button>
+        <button id="saveJob" class="save" type="button">Save Job</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const jobs = [
+      { title: 'Frontend Developer', company: 'Talentify', location: 'Remote', description: 'Build responsive user interfaces with HTML, CSS, and JavaScript.' },
+      { title: 'Backend Engineer', company: 'Talentify', location: 'New York, NY', description: 'Design APIs and manage server-side systems to power the application.' },
+      { title: 'UX Designer', company: 'Talentify', location: 'London, UK', description: 'Create user journeys and wireframes for a polished web experience.' }
+    ];
+
+    const jobList = document.getElementById('jobList');
+    const searchInput = document.getElementById('search');
+    const addJobButton = document.getElementById('addJobButton');
+    const newJobForm = document.getElementById('newJobForm');
+    const cancelAdd = document.getElementById('cancelAdd');
+    const saveJob = document.getElementById('saveJob');
+    const jobTitle = document.getElementById('jobTitle');
+    const jobCompany = document.getElementById('jobCompany');
+    const jobLocation = document.getElementById('jobLocation');
+    const jobDescription = document.getElementById('jobDescription');
+
+    function renderJobs(filter = '') {
+      const query = filter.trim().toLowerCase();
+      jobList.innerHTML = '';
+      const filteredJobs = jobs.filter(job => {
+        return [job.title, job.company, job.location, job.description]
+          .join(' ')
+          .toLowerCase()
+          .includes(query);
+      });
+
+      if (filteredJobs.length === 0) {
+        jobList.innerHTML = '<li class="job-card"><p>No jobs match your search.</p></li>';
+        return;
+      }
+
+      filteredJobs.forEach((job, index) => {
+        const item = document.createElement('li');
+        item.className = 'job-card';
+        item.innerHTML = `
+          <h3>${job.title}</h3>
+          <div class="meta">${job.company} · ${job.location}</div>
+          <p>${job.description}</p>
+          <button type="button" data-index="${index}">Apply</button>
+        `;
+        jobList.appendChild(item);
+      });
+    }
+
+    function showForm() {
+      newJobForm.classList.remove('hidden');
+      jobTitle.focus();
+    }
+
+    function hideForm() {
+      newJobForm.classList.add('hidden');
+      jobTitle.value = '';
+      jobCompany.value = '';
+      jobLocation.value = '';
+      jobDescription.value = '';
+    }
+
+    addJobButton.addEventListener('click', showForm);
+    cancelAdd.addEventListener('click', hideForm);
+    newJobForm.addEventListener('click', event => {
+      if (event.target === newJobForm) hideForm();
+    });
+
+    saveJob.addEventListener('click', () => {
+      const title = jobTitle.value.trim();
+      const company = jobCompany.value.trim();
+      const location = jobLocation.value.trim();
+      const description = jobDescription.value.trim();
+      if (!title || !company || !location || !description) {
+        alert('Please complete all fields.');
+        return;
+      }
+      jobs.push({ title, company, location, description });
+      hideForm();
+      renderJobs(searchInput.value);
+    });
+
+    searchInput.addEventListener('input', () => renderJobs(searchInput.value));
+
+    renderJobs();
+  </script>
+</body>
+</html>
