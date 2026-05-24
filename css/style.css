@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 1. Add the Hero Section for the background image */
+.hero-section {
+    /* Put the path to your actual image file inside the quotes below */
+    background-image: url('../images/banners/Nav-background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    
+    /* Ensures the section covers at least the full height of the screen */
+    ; 
+}
+
+/* 2. Update Navbar to be transparent */
+.navbar {
+    background: transparent; /* Changed from #222 so the image shows through */
+    padding: 25px 0; /* Slightly increased padding for a cleaner look */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Aligns items to the left, change to center if preferred */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* Makes text easier to read over a picture */
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Little hover effect for better user experience */
+}
+
+/* 3. Fix the Main Container margins */
+.main-container {
+    color: #ffffff;
+    width: 90%;
+    /* margin: top right bottom left */
+    /* This pushes the text down 80px, and centers it horizontally */
+    margin: 80px auto 0 auto; 
+}
