@@ -1,12 +1,15 @@
 body {
+    background-color: #ffffff;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* 1. Add the Hero Section for the background image */
 .hero-section {
     /* Put the path to your actual image file inside the quotes below */
-    background-image: url('../images/banners/Nav-background.png'); 
+    background-image: url('../images/banners/Main-navbar3.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,19 +29,23 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: flex-start; /* Aligns items to the left, change to center if preferred */
+    justify-content: flex-end; /* Aligns items to the left, change to center if preferred */
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-weight: bold; /* Makes text easier to read over a picture */
+    font-weight: bold;
+    padding: 8px 15px; /* Adds space around the text */
+    border-radius: 20px; /* Rounds the corners perfectly */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .navbar a:hover {
-    text-decoration: underline; /* Little hover effect for better user experience */
+    background-color: rgba(255, 255, 255, 0.2); /* Little hover effect for better user experience */
 }
 
 /* 3. Fix the Main Container margins */

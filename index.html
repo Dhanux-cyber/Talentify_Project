@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,6 +16,7 @@
 </head>
 
 <body>
+    <script src="js/script.js"></script>
     <header class="hero-section">
              <!-- Navigation Bar Start -->
 <nav class="navbar">
@@ -37,6 +39,25 @@
             <!-- Main Content -->
 
         <div class="main-container">
+
+                        <div class="container mt-5">
+                <form action="jobs.html" method="GET">
+                    <div class="input-group input-group-lg shadow-lg rounded">
+                        
+                        <input type="text" class="form-control px-4" placeholder="I'm looking for... (Eg: Job title, Company)">
+                        
+                        <select class="form-select text-muted" style="max-width: 250px;">
+                            <option selected>All Locations</option>
+                            <option value="colombo">Colombo</option>
+                            <option value="gampaha">Gampaha</option>
+                            <option value="kandy">Kandy</option>
+                        </select>
+                        
+                        <button class="btn btn-success px-5 fw-bold" type="submit">SEARCH</button>
+                        
+                    </div>
+                </form>
+</div>
 
         <h1>Welcome to the Home Page</h1>
 
