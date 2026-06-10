@@ -13,11 +13,18 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 10vh;
+    
     
     /* Ensures the section covers at least the full height of the screen */
     ; 
 }
+
+.hero-index {
+    min-height: 10vh; 
+}
+.hero-contact {
+    min-height: 100vh; /* Full viewport height for the contact page */
+}   
 
 /* 2. Update Navbar to be transparent */
 .navbar {
