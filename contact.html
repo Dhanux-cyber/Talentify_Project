@@ -8,11 +8,50 @@
      <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <style>
-        #one{
+ #one{
             
-            color: lightcyan;
+    color: lightcyan;
 
-        };
+ };
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+ /*outerbox form and image   */    
+.outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+
+}
+
+.image-box {
+    width: 50%;
+}
+
+.form-box {
+    width: 50%;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#two {
+    justify-content: center;
+}
+
     </style>
 </head>
 <body>
@@ -36,13 +75,13 @@
             <!-- Navigation Bar End -->
 
             </nav>
- <main>
-    <section class="class hereee......">
+ <div id = "two">
+    <section class="outer-box">
             <img src="insert photo link" alt="Contact Support Graphic">
         </section>
 <section>
     <h2 id="one">Contact Us</h2>
-    <form action="submit_contact_form.php" method="post">
+    <form class = "form-box">
         <div> 
             <input type="text" name="name" placeholder="Your Name" required>
         </div> 
@@ -55,9 +94,12 @@
         <div>
             <input type="text" name="message" placeholder="Your Message" required>
         </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
     </form>
 </section>
             
-</main>   
+</div>   
 </body>
 </html>
