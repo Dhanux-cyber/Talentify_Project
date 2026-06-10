@@ -63,3 +63,50 @@ body {
     /* This pushes the text down 80px, and centers it horizontally */
     margin: 80px auto 0 auto; 
 }
+
+.head-2-1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-title{ /* New class for the home page title */ 
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6); 
+    margin: 0 auto;
+   
+}
+
+.home-subtitle {
+    font-size: 1.25rem; 
+    color: #f0f0f0; 
+    font-weight: 400; 
+    margin-bottom: 30px; 
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6); 
+    max-width: 650px; 
+    margin: 0 auto;
+    
+}
+
+.image-box {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f9fa; /* ලා අළු පාට පසුබිමක් */
+    border-radius: 8px; /* Box එකේ කොන් රවුම් කිරීම */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* රූපය Box එකෙන් එළියට පැනීම වැලැක්වීම */
+    border: 1px solid #eee;
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+ 
