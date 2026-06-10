@@ -92,14 +92,13 @@ body {
 }
 
 .image-box {
-    width: 60px;
-    height: 60px;
-    background-color: #f8f9fa; /* ලා අළු පාට පසුබිමක් */
-    border-radius: 8px; /* Box එකේ කොන් රවුම් කිරීම */
-    display: flex;
+    width: 500px;
+    height: 300px;
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* රූපය Box එකෙන් එළියට පැනීම වැලැක්වීම */
+    overflow: hidden; 
     border: 1px solid #eee;
 }
 
