@@ -3,56 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
 
      <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <style>
- #one{
-            
-    color: lightcyan;
-
- };
-
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
- /*outerbox form and image   */    
-.outer-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px;
-
-}
-
-.image-box {
-    width: 50%;
-}
-
-.form-box {
-    width: 50%;
-}
-
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-#two {
-    justify-content: center;
-}
-
-    </style>
+    <link rel="stylesheet" href="css/contact.css">
+    
 </head>
 <body>
     <script src="js/script.js"></script>
@@ -67,32 +23,50 @@ img {
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
-            </ul> 
+        </ul> 
 
             
              
         </div>
             <!-- Navigation Bar End -->
-
             </nav>
- <div id = "two">
-    <section class="outer-box">
+    </header>           
+ <div class = "outer-box">
+    <section>
             <img src="insert photo link" alt="Contact Support Graphic">
+            <div class = "contact-info">
+            <div>
+            <h3>Mailing Address</h3>
+            <address>
+                123 Main Street<br>
+                City, State 12345
+            </address>
+            </div>
+            <div>
+            <h3>Phone</h3>
+            <p>(123) 456-7890</p>
+            </div>
+            <div>
+             <h3>Email</h3>
+             <p>info@company.com</p>
+             </div>
+             </div>
         </section>
-<section>
-    <h2 id="one">Contact Us</h2>
-    <form class = "form-box">
+<section class = "form-box">
+    <h2 >Contact Us</h2>
+    <form >
         <div> 
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input class = "form-items" type="text" name="name" placeholder="Name" required>
+        
         </div> 
         <div>
-            <input type="text" name="email" placeholder="Your Email" required>
+            <input class = "form-items" type="text" name="email" placeholder="Email" required>
         </div>
         <div>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <input class = "form-items" type="tel" name="phone" placeholder="Phone Number" required>
         </div>   
         <div>
-            <input type="text" name="message" placeholder="Your Message" required>
+            <textarea class = "form-items" cols="20" rows="5" name="message" placeholder="Message" required></textarea>
         </div>
         <div>
             <button type="submit">Submit</button>
