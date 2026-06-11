@@ -63,3 +63,286 @@ body {
     /* This pushes the text down 80px, and centers it horizontally */
     margin: 80px auto 0 auto; 
 }
+
+.head-2-1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-title{ /* New class for the home page title */ 
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6); 
+    margin: 0 auto;
+   
+}
+
+.home-subtitle {
+    font-size: 1.25rem; 
+    color: #f0f0f0; 
+    font-weight: 400; 
+    margin-bottom: 30px; 
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6); 
+    max-width: 650px; 
+    margin: 0 auto;
+    
+}
+
+.image-box {
+    width: 500px;
+    height: 300px;
+    background-color: #f8f9fa; 
+    border-radius: 8px; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    border: 1px solid #eee;
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Footer */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+footer{
+    background:#00133a;
+    color:white;
+    padding:60px 8%;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* Left Side */
+
+.footer-left{
+    flex:1;
+    min-width:350px;
+}
+
+.footer-left h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.footer-left h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.footer-left p{
+    font-size:14px;
+    color:#d6d6d6;
+    line-height:1.8;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+/* Subscribe Box */
+
+.subscribe-box{
+    background:#fff;
+    border-radius:15px;
+    display:flex;
+    overflow:hidden;
+    padding:15px;
+    max-width:700px;
+}
+
+.subscribe-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:16px;
+    padding:0 15px;
+}
+
+.subscribe-box button{
+    background:#52d017;
+    color:white;
+    border:none;
+    padding:15px 50px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.subscribe-box button:hover{
+    background:#3fb312;
+}
+
+/* Right Side */
+
+.footer-right{
+    flex:1;
+    min-width:500px;
+}
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.column{
+    min-width:180px;
+}
+
+.column h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.column ul{
+    list-style:none;
+}
+
+.column ul li{
+    margin-bottom:12px;
+}
+
+.column ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.column ul li a:hover{
+    color:#57d21f;
+}
+
+/* Contact Info */
+
+.contact-info{
+    margin-top:40px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:16px;
+}
+
+.contact-info i{
+    font-size:18px;
+}
+
+/* Social Icons */
+
+.social-icons{
+    margin-top:40px;
+    display:flex;
+    gap:25px;
+}
+
+.social-icons i{
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    color:#57d21f;
+}
+
+/* Copyright */
+
+.copyright{
+    margin-top:30px;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .footer-container{
+        flex-direction:column;
+    }
+
+    .links{
+        justify-content:flex-start;
+        gap:60px;
+        flex-wrap:wrap;
+    }
+
+}
+
+@media(max-width:768px){
+
+    footer{
+        padding:50px 25px;
+    }
+
+    .footer-left,
+    .footer-right{
+        min-width:100%;
+    }
+
+    .footer-left h1{
+        font-size:40px;
+    }
+
+    .footer-left h2{
+        font-size:24px;
+    }
+
+    .links{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .subscribe-box{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .subscribe-box input{
+        height:55px;
+    }
+
+    .subscribe-box button{
+        width:100%;
+        padding:16px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .social-icons{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+}
