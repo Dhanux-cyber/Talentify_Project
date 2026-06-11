@@ -1,5 +1,4 @@
-
-      function switchForm(formType) {
+function switchForm(formType) {
             const wrapper = document.getElementById('formWrapper');
             const loginSec = document.getElementById('loginSection');
             const regSec = document.getElementById('registerSection');
@@ -21,7 +20,7 @@
             }
         }
 
-        function togglePass(inputId, icon) {
+ function togglePass(inputId, icon) {
             const inputField = document.getElementById(inputId);
             if (inputField.type === "password") {
                 inputField.type = "text";

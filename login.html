@@ -5,161 +5,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 800px;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
+
 <body>
+
+    <!-- FIX 1: Corrected nav/header structure with proper closing tags -->
+    <header class="hero-section hero-login">
+        <nav class="navbar">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Job Listings</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container d-flex justify-content-center align-items-center my-5">
+        <!-- Main Container -->
+        <div class="form-container-card" id="formWrapper">
+
+            <div class="form-navigation-tabs">
+                <div class="nav-tab active" id="loginTab" onclick="switchForm('login')">Login</div>
+                <div class="nav-tab" id="registerTab" onclick="switchForm('register')">Register</div>
+            </div>
+
+            <div class="form-content-area">
+
+                <!-- Login Section -->
+                <div id="loginSection">
+                    <h3 class="form-main-title">Job Seeker Login</h3>
+                    <form id="loginForm">
+                        <div class="input-block">
+                            <input type="email" placeholder="Email *" required>
+                        </div>
+                        <div class="input-block">
+                            <input type="password" placeholder="Password *" required id="loginPass">
+                            <i class="fa-solid fa-eye-slash toggle-icon" onclick="togglePass('loginPass', this)"></i>
+                        </div>
+                        <div class="action-row">
+                            <span class="small-label">Forgot Password ?</span>
+                            <button type="button" class="btn-outline-blue">Reset Now</button>
+                        </div><br>
+                        <button type="submit" class="btn-solid-green">Login</button>
+                    </form>
+                    <div class="switch-text">
+                        Don't have an account? <a href="javascript:void(0)" onclick="switchForm('register')">Register Now</a>
+                    </div>
+                </div>
+
+                <!-- Register Section -->
+                <div id="registerSection" style="display: none;">
+                    <h3 class="form-main-title">Job Seeker Register</h3>
+                    <form id="registerForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="custom-input" placeholder="First Name *" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="custom-input" placeholder="Last Name *" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email" class="custom-input" placeholder="Email *" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3 input-block">
+                                <input type="password" class="custom-input" placeholder="Password *" id="regPass" required>
+                                <i class="fa-solid fa-eye-slash toggle-icon" onclick="togglePass('regPass', this)"></i>
+                            </div>
+                            <div class="col-md-6 mb-3 input-block">
+                                <input type="password" class="custom-input" placeholder="Confirm Password *" id="regConfirm" required>
+                                <i class="fa-solid fa-eye-slash toggle-icon" onclick="togglePass('regConfirm', this)"></i>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center mb-3">
+                            <div class="col-md-6 d-flex align-items-center">
+                                <label class="me-3 small-label">Your Gender</label>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" checked>
+                                    <label class="form-check-label upload-info" for="male">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female">
+                                    <label class="form-check-label upload-info" for="female">Female</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="custom-input" placeholder="Home Town">
+                            </div>
+                        </div>
+
+                        <div class="cv-upload-box mb-1">
+                            <label for="cvFile" class="d-flex justify-content-between align-items-center w-100" style="cursor: pointer;">
+                                <span class="small-label" style="color: slategray;">CV *</span>
+                                <i class="fa-solid fa-upload"></i>
+                            </label>
+                            <input type="file" id="cvFile" style="display: none;">
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label upload-info" for="terms">I agree to <strong>Privacy Policy & Terms/Conditions</strong>.</label>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="news">
+                                    <label class="form-check-label upload-info" for="news">Receive jobs by email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FIX 2: Properly closed row div before closing form tag -->
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <button type="submit" class="btn-solid-green">REGISTER</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="switch-text mt-4">
+                        Already have an account? <a href="javascript:void(0)" onclick="switchForm('login')">Login Now</a>
+                    </div>
+                </div>
+
+                <div class="bottom-divider"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer Start -->
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <h1>Jobs</h1>
+                <h2>Newsletters</h2>
+                <p>
+                    Subscribe to our newsletter and receive an email alert
+                    on the most matching jobs every Wednesday.
+                </p>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Enter your email...">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="links">
+                    <div class="column">
+                        <h3>Job Seeker</h3>
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">CV-Less Jobs</a></li>
+                            <li><a href="#">CV Formats Store</a></li>
+                            <li><a href="#">Online Courses</a></li>
+                            <li><a href="#">Book a Mentor</a></li>
+                            <li><a href="#">Try Premium</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h3>Recruiters</h3>
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Features</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Differently-Abled Employment</a></li>
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div>
+                        <i class="fa-solid fa-location-arrow"></i>
+                        417/B, Temple Lane, Colombo 06, Sri Lanka
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-phone"></i>
+                        011-2345678
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        info@jobs.jobs
+                    </div>
+                </div>
+
+                <div class="social-icons">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+                <div class="copyright">
+                    © 2026 Jobs.lk (Pvt) Ltd. All Rights Reserved
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer End -->
+    </footer>
+
+    <!-- FIX 3: All scripts moved to bottom of body, after DOM is loaded -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <header class="hero-section">
-             <!-- Navigation Bar Start -->
-<nav class="navbar">
-         <div class="container">
+    <script src="js/login.js"></script>
 
-        <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Listings</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul> 
-</nav>
-            
-             
-        </div>
-            <!-- Navigation Bar End -->
-
-
-
- <footer><!-- Footer Start -->
-
-<div class="footer-container">
-
-    
-    <div class="footer-left">
-
-        <h1>Jobs</h1>
-
-        <h2>Newsletters</h2>
-
-        <p>
-            Subscribe to our newsletter and receive an email alert
-            on the most matching jobs every Wednesday.
-        </p>
-
-        <div class="subscribe-box">
-
-            <input type="email" placeholder="Enter your email...">
-
-            <button>SUBSCRIBE</button>
-
-        </div>
-
-    </div>
-
-
-    
-    <div class="footer-right">
-
-        <div class="links">
-
-            <div class="column">
-
-                <h3>Job Seeker</h3>
-
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">CV-Less Jobs</a></li>
-                    <li><a href="#">CV Formats Store</a></li>
-                    <li><a href="#">Online Courses</a></li>
-                    <li><a href="#">Book a Mentor</a></li>
-                    <li><a href="#">Try Premium</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="column">
-
-                <h3>Recruiters</h3>
-
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Features</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="column">
-
-                <h3>Support</h3>
-
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Differently-Abled Employment</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-info">
-
-            <div>
-                <i class="fa-solid fa-location-arrow"></i>
-                417/B, Temple Lane, Colombo 06, Sri Lanka
-            </div>
-
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                011-2345678
-            </div>
-
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-                info@jobs.jobs
-            </div>
-
-        </div>
-
-
-        <div class="social-icons">
-
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-
-        </div>
-
-
-        <div class="copyright">
-            © 2026 Jobs.lk (Pvt) Ltd. All Rights Reserved
-        </div>
-
-    </div>
-
-</div>
-
-</footer>
-
-<!-- Footer End -->
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>        
 </body>
 </html>

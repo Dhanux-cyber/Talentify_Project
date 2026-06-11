@@ -1,4 +1,3 @@
-/* Main Wrapper Container for the Login Box */
 .login-card {
     background-color: white;
     width: 100%;
@@ -9,7 +8,7 @@
     border: 1px solid lightgray;
 }
 
-/* Header Switch Tabs Layout */
+
 .form-tabs {
     display: flex;
     border-bottom: 2px solid lightgray;
@@ -24,7 +23,7 @@
     cursor: pointer;
 }
 
-/* Color properties for Selected and Deselected tabs */
+
 .form-tab.active {
     background-color: darkblue;
     color: white;
@@ -36,7 +35,6 @@
     color: slategray;
 }
 
-/* Card Padding Specifications */
 .form-card-body {
     padding: 30px 40px;
 }
@@ -48,7 +46,7 @@
     margin-bottom: 25px;
 }
 
-/* Form Input Element Wrapper */
+
 .form-input-group {
     position: relative;
     margin-bottom: 20px;
@@ -65,7 +63,7 @@
     color: black;
 }
 
-/* Password Eye Overlay Positioning */
+
 .form-input-group .toggle-password-icon {
     position: absolute;
     right: 20px;
@@ -75,7 +73,7 @@
     color: slategray;
 }
 
-/* Forgot Password Text and Reset Action Setup */
+
 .forgot-pwd-section {
     display: flex;
     align-items: center;
@@ -107,7 +105,7 @@
     color: white;
 }
 
-/* Primary Green Login Button styling */
+
 .form-submit-btn {
     width: 100%;
     background-color: limegreen;
@@ -127,7 +125,7 @@
     background-color: green;
 }
 
-/* Content Redirection Block Styling */
+
 .register-redirect-text {
     text-align: center;
     font-size: 14px;
@@ -146,7 +144,6 @@
     margin-bottom: 20px;
 }
 
-/* Alternative Login Icons Alignment and Layout */
 .social-login-lbl {
     text-align: center;
     font-size: 14px;
@@ -178,19 +175,17 @@
     background-color: whitesmoke;
 }
 
-/* Main Card Styles */
 .form-container-card {
     background-color: white;
     width: 100%;
-    max-width: 450px; /* Default Login Width */
+    max-width: 450px; 
     border-radius: 12px;
     box-shadow: 0 10px 30px lightgray;
     overflow: hidden;
-    transition: max-width 0.5s ease-in-out; /* Smooth size change */
+    transition: max-width 0.5s ease-in-out; 
     border: 1px solid whitesmoke;
 }
 
-/* Expanded size for Register */
 .form-container-card.register-mode {
     max-width: 800px;
 }
@@ -218,7 +213,7 @@
     border-top-right-radius: 5px;
 }
 
-/* General Styling */
+
 .form-content-area {
     padding: 30px 40px;
 }
@@ -230,7 +225,6 @@
     margin-bottom: 20px;
 }
 
-/* Custom Input Fields */
 .custom-input, .input-block input {
     width: 100%;
     padding: 12px 15px;
@@ -278,7 +272,7 @@
     cursor: pointer;
 }
 
-/* File Upload Box */
+
 .cv-upload-box {
     background-color: whitesmoke;
     padding: 12px 15px;
@@ -292,7 +286,6 @@
     margin-top: 5px;
 }
 
-/* Helper Text */
 .small-label {
     font-size: 14px;
     font-weight: 600;
@@ -312,7 +305,7 @@
     text-decoration: none;
 }
 
-/* Social Icons */
+
 .social-circle {
     width: 35px;
     height: 35px;
@@ -333,10 +326,66 @@
 
 
 
-/* Header එක උඩින්ම තබා ගැනීමට සහ Form එක මැදට තබා ගැනීමට මෙය උදව් වේ */
+
+
 .form-container-card {
-    margin-top: auto;
-    margin-bottom: auto;
+    background-color: white;
     width: 100%;
-    max-width: 600px; /* Form එක ඕනෑවට වඩා පළල් වීම වැළැක්වීමට */
+
+    max-width: 450px; /* Standard size layout for compact login */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px lightgray;
+    overflow: hidden;
+    transition: max-width 0.4s ease-in-out; /* Smooth transition when widening */
+    border: 1px solid whitesmoke;
+}
+
+.form-container-card.register-mode {
+    max-width: 800px; /* Widens the exact same div smoothly when register mode is toggled */
+}
+
+.form-navigation-tabs {
+    display: flex;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.nav-tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: slategray;
+    background-color: white;
+}
+
+.nav-tab.active {
+    background-color: darkblue;
+    color: white;
+}
+
+/* Base Card Size (Login) */
+.form-container-card {
+    background-color: white;
+    width: 100%;
+    max-width: 450px; 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px lightgray;
+    overflow: hidden;
+    transition: max-width 0.4s ease-in-out; 
+    border: 1px solid whitesmoke;
+}
+
+.form-container-card.register-mode {
+    max-width: 800px;
+}
+
+.form-navigation-tabs {
+    display: flex;
+    border-bottom: 2px solid whitesmoke;
+}
+.nav-tab.active {
+    background-color: darkblue;
+    color: white;
 }

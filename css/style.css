@@ -18,13 +18,22 @@ body {
     /* Ensures the section covers at least the full height of the screen */
     ; 
 }
+.hero-about {
+    min-height: 20vh; /* Full viewport height for the about page */
+}
 
 .hero-index {
     min-height: 10vh; 
 }
 .hero-contact {
-    min-height: 100vh; /* Full viewport height for the contact page */
+    min-height: 10vh; /* Full viewport height for the contact page */
 }   
+
+.hero-login {
+    min-height: 20vh; /* Full viewport height for the login page */
+}
+
+.hero-contact
 
 /* 2. Update Navbar to be transparent */
 .navbar {
@@ -91,22 +100,8 @@ body {
     
 }
 
-.image-box {
-    width: 500px;
-    height: 300px;
-    background-color: #f8f9fa; 
-    border-radius: 8px; 
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; 
-    border: 1px solid #eee;
-}
 
-.image-box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
+
 
 /* Footer */
 
