@@ -134,7 +134,7 @@
 }
 
 .register-redirect-text a {
-    color: darkblue;
+    color: #00133a;
     text-decoration: none;
     font-weight: bold;
 }
@@ -148,7 +148,7 @@
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: darkblue;
+    color: #00133a;
     margin-bottom: 15px;
 }
 
@@ -190,7 +190,7 @@
     max-width: 800px;
 }
 
-/* Header Tabs */
+
 .form-navigation-tabs {
     display: flex;
     border-bottom: 2px solid whitesmoke;
@@ -208,7 +208,7 @@
 }
 
 .nav-tab.active {
-    background-color: darkblue;
+    background-color: #00133a;
     color: white;
     border-top-right-radius: 5px;
 }
@@ -221,7 +221,7 @@
 .form-main-title {
     font-size: 16px;
     font-weight: bold;
-    color: darkblue;
+    color: #00133a;
     margin-bottom: 20px;
 }
 
@@ -289,7 +289,7 @@
 .small-label {
     font-size: 14px;
     font-weight: 600;
-    color: darkblue;
+    color: #00133a;
 }
 
 .switch-text {
@@ -300,7 +300,7 @@
 }
 
 .switch-text a {
-    color: darkblue;
+    color: #00133a;
     font-weight: bold;
     text-decoration: none;
 }
@@ -325,23 +325,19 @@
 }
 
 
-
-
-
 .form-container-card {
     background-color: white;
     width: 100%;
-
-    max-width: 450px; /* Standard size layout for compact login */
+    max-width: 450px; 
     border-radius: 12px;
     box-shadow: 0 10px 30px lightgray;
     overflow: hidden;
-    transition: max-width 0.4s ease-in-out; /* Smooth transition when widening */
+    transition: max-width 0.4s ease-in-out; 
     border: 1px solid whitesmoke;
 }
 
 .form-container-card.register-mode {
-    max-width: 800px; /* Widens the exact same div smoothly when register mode is toggled */
+    max-width: 800px; 
 }
 
 .form-navigation-tabs {
@@ -361,7 +357,7 @@
 }
 
 .nav-tab.active {
-    background-color: darkblue;
+    background-color: #00133a;
     color: white;
 }
 
@@ -386,6 +382,6 @@
     border-bottom: 2px solid whitesmoke;
 }
 .nav-tab.active {
-    background-color: darkblue;
+    background-color: #00133a;
     color: white;
 }

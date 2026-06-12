@@ -11,24 +11,57 @@
     <link rel="stylesheet" href="css/login.css">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             position: relative;
             min-height: 100vh;
-            padding-bottom: 800px;
+            overflow-x: hidden;
         }
 
+        
+        header.hero-section {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            display: block;
+        }
+
+        
+        nav.navbar {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+
+        
+        .container.d-flex {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            background-image: url('images/banners/grey.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            padding: 40px 0;
+            max-width: 100% !important;
+        }
+
+        
         footer {
-            position: absolute;
-            bottom: 0;
+            display: block;
             width: 100%;
+            margin-top: 0 !important;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- FIX 1: Corrected nav/header structure with proper closing tags -->
-    <header class="hero-section hero-login">
+    
+    <header class="hero-section">
         <nav class="navbar">
             <div class="container">
                 <ul>
@@ -43,7 +76,7 @@
     </header>
 
     <div class="container d-flex justify-content-center align-items-center my-5">
-        <!-- Main Container -->
+        
         <div class="form-container-card" id="formWrapper">
 
             <div class="form-navigation-tabs">
@@ -53,7 +86,7 @@
 
             <div class="form-content-area">
 
-                <!-- Login Section -->
+                
                 <div id="loginSection">
                     <h3 class="form-main-title">Job Seeker Login</h3>
                     <form id="loginForm">
@@ -75,7 +108,7 @@
                     </div>
                 </div>
 
-                <!-- Register Section -->
+                
                 <div id="registerSection" style="display: none;">
                     <h3 class="form-main-title">Job Seeker Register</h3>
                     <form id="registerForm">
@@ -143,7 +176,7 @@
                             </div>
                         </div>
 
-                        <!-- FIX 2: Properly closed row div before closing form tag -->
+                        
                         <div class="row align-items-center">
                             <div class="col-md-6 mb-3 mb-md-0">
                                 <button type="submit" class="btn-solid-green">REGISTER</button>
@@ -161,6 +194,7 @@
             </div>
         </div>
     </div>
+
 
     <footer>
         <!-- Footer Start -->
@@ -250,7 +284,7 @@
         <!-- Footer End -->
     </footer>
 
-    <!-- FIX 3: All scripts moved to bottom of body, after DOM is loaded -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/login.js"></script>
