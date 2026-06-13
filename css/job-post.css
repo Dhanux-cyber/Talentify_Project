@@ -2,16 +2,19 @@
 .post{
     
     position:relative;
-    margin-top: 70px;
+    margin-top: 0;
     height: fit-content;
-    margin-bottom: 500px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
     
 }
 .container-title{
     color: black ;
     position:absolute;
-    right: 0%;
-    top: 50%;
+    right: 5%;
+    top: 25%;
     max-width:800px;
     width:90%;
     margin:auto;
@@ -44,6 +47,50 @@
     background:#1F3E2E;
     color:#fff;
 }
+.job-guide{
+    max-width: 850px;
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff, #f8fdf9);
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.job-guide h2{
+    color: #1F3E2E;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.job-guide p{
+    color: #555;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.job-guide ul{
+    list-style: none;
+    padding: 0;
+}
+
+.job-guide ul li{
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    color: #333;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.job-guide ul li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
 
 #Jobform {
   display: flex;
@@ -51,26 +98,29 @@
   gap: 15px;              
   max-width: 550px;      
   margin: 0 auto; 
+  color: #000000;
 }
           /* Centers the form */
 
 .job-form-container{
-    background-image: url('../images/jobimages/form.jpeg');
+    /* background-image: url('../images/jobimages/job.jpeg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
+    color: white;
     font-family: 'Poppins', sans-serif;
     width: 100%;
     min-height: 100vh;
-
-    display: flex;
+    margin-top: 0;
+    
     justify-content: center; 
     align-items: center; 
 }
     
 
 .form-box{
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     width: 90%;
     max-width: 800px;
@@ -78,7 +128,7 @@
     border: 2px solid white;
     border-radius: 15px;
     padding: 50px;
-    color: #ffffff;
+    color: black;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2)
 }
 .form-header{
@@ -118,7 +168,7 @@ input, select, textarea {
     border-radius: 50px;
     border: 2px solid rgba(255,255,255,0.3);
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: black;
     font-size: 17px;
     outline: none;
     transition: .4s;
@@ -143,10 +193,13 @@ textarea:focus{
 }
 .btn-submit:hover{
     transform: translateY(-5px);
-    background:#2f3d4d;
+    background:#00133a;
+    color: white;
 }
+
 ::placeholder{
-    color: rgba(255,255,255,0.8);
+    color: black;
+    font-weight: 500;
 }
 #Jobform label{
     font-size: 20px;

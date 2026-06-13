@@ -11,8 +11,114 @@
 
      <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f3ef;
+
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    margin-bottom:30px;
+    color:#333;
+}
+
+h2 span{
+    font-weight:bold;
+}
+
+.job-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+}
+
+.job-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.job-card:hover{
+    transform:translateY(-5px);
+}
+
+.top-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.days{
+    font-size:14px;
+    color:#666;
+}
+
+.job-type{
+    background:#dff8f6;
+    color:#008b8b;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+.job-card img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.company{
+    color:#888;
+    margin-bottom:8px;
+}
+
+.job-card h3{
+    font-size:24px;
+    margin-bottom:12px;
+    color:#111;
+}
+
+.location{
+    color:#777;
+    margin-bottom:25px;
+}
+
+button{
+    background:white;
+    color:#ff6b3d;
+    border:2px solid #ff6b3d;
+    padding:12px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff6b3d;
+    color:white;
+}
+    </style>
     <script src="js/script.js"></script>
     <header class="hero-section">
              <!-- Navigation Bar Start -->
@@ -34,137 +140,339 @@
 </nav>
     </header>
 
-<section class="job-listings py-5">
-    <div class="container">
-        <div class="mb-4 text-center">
-            <h1 class="h2">Job Listings</h1>
-            <p class="text-muted">Explore the latest opportunities across top companies.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Software Engineer</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">TechNova Pvt Ltd</h6>
-                        <p class="mb-1"><strong>Location:</strong> Colombo</p>
-                        <p class="mb-1"><strong>Type:</strong> Full-time</p>
-                        <p class="card-text">Build and maintain web applications using modern JavaScript frameworks.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Marketing Executive</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">BrightMark Solutions</h6>
-                        <p class="mb-1"><strong>Location:</strong> Remote</p>
-                        <p class="mb-1"><strong>Type:</strong> Part-time</p>
-                        <p class="card-text">Support digital campaigns, social media, and content strategy for clients.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Graphic Designer</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Creative Hive</h6>
-                        <p class="mb-1"><strong>Location:</strong> Kandy</p>
-                        <p class="mb-1"><strong>Type:</strong> Contract</p>
-                        <p class="card-text">Design visual assets for branding, digital, and print campaigns.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analyst</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Insight Analytics</h6>
-                        <p class="mb-1"><strong>Location:</strong> Galle</p>
-                        <p class="mb-1"><strong>Type:</strong> Full-time</p>
-                        <p class="card-text">Analyze business data for insights and reporting using SQL and Excel.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Customer Support Agent</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">HelpPoint Services</h6>
-                        <p class="mb-1"><strong>Location:</strong> Colombo</p>
-                        <p class="mb-1"><strong>Type:</strong> Full-time</p>
-                        <p class="card-text">Provide customer assistance and resolve inquiries across phone and chat.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Business Development Manager</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Enterprise Edge</h6>
-                        <p class="mb-1"><strong>Location:</strong> Negombo</p>
-                        <p class="mb-1"><strong>Type:</strong> Full-time</p>
-                        <p class="card-text">Drive sales growth and partnerships for technology solutions.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">HR Coordinator</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">PeopleFirst HR</h6>
-                        <p class="mb-1"><strong>Location:</strong> Jaffna</p>
-                        <p class="mb-1"><strong>Type:</strong> Permanent</p>
-                        <p class="card-text">Coordinate recruitment, onboarding, and employee relations activities.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Finance Assistant</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">CapitalCore</h6>
-                        <p class="mb-1"><strong>Location:</strong> Matara</p>
-                        <p class="mb-1"><strong>Type:</strong> Internship</p>
-                        <p class="card-text">Assist with bookkeeping, invoicing, and financial documentation.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">SEO Specialist</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">RankRise Digital</h6>
-                        <p class="mb-1"><strong>Location:</strong> Remote</p>
-                        <p class="mb-1"><strong>Type:</strong> Contract</p>
-                        <p class="card-text">Optimize website content and campaigns to improve organic search visibility.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Coordinator</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">BuildWave Projects</h6>
-                        <p class="mb-1"><strong>Location:</strong> Kegalle</p>
-                        <p class="mb-1"><strong>Type:</strong> Full-time</p>
-                        <p class="card-text">Support project teams with scheduling, communication, and reporting.</p>
-                        <a href="#" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<div class="container">
+    <h2><span>42</span> Vacancies Found</h2>
 
+    <div class="job-grid">
+
+        <!-- Card 1 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                <span class="job-type">Part-Time Job</span>
+            </div>
+            <img src="images\jobimages\UXUI Designer.jpeg" alt="Company Logo">
+            <p class="company">Leap Yard</p>
+            <h3>Junior Cybersecurity Analyst</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Wellawatte, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Astroid SL</p>
+            <h3>Sales Representative</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Colors & Shades</p>
+            <h3>Assistant Site Engineer/Trainee</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 14 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Colors & Shades</p>
+            <h3>Marketing Executive</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 5 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Techcorp</p>
+            <h3>Software Engineer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Kandy, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 21 days left</span>
+                <span class="job-type">Remote Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Virtusa</p>
+            <h3>QA Engineer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 10 days left</span>
+                <span class="job-type">Internship</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">WSO2</p>
+            <h3>Business Analyst Intern</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 12 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Sysco LABS</p>
+            <h3>DevOps Engineer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Malabe, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 30 days left</span>
+                <span class="job-type">Part-Time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Axiata Digital</p>
+            <h3>Graphic Designer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 8 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Dialog Axiata</p>
+            <h3>Customer Care Executive</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Gampaha, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 15 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Brandix</p>
+            <h3>HR Executive</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Ratnapura, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 18 days left</span>
+                <span class="job-type">Contract</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">MAS Holdings</p>
+            <h3>Merchandiser</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Katunayake, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 25 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">John Keells</p>
+            <h3>Accounts Assistant</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 4 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Hayleys PLC</p>
+            <h3>Logistics Officer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Negombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 20 days left</span>
+                <span class="job-type">Part-Time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Zone24x7</p>
+            <h3>Content Writer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 7 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">99x</p>
+            <h3>Frontend Developer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 17 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 11 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Aitken Spence</p>
+            <h3>Travel Consultant</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Galle, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 18 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 16 days left</span>
+                <span class="job-type">Remote Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Codegen</p>
+            <h3>UI/UX Engineer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 19 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 3 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Hemas Holdings</p>
+            <h3>Brand Manager</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 20 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 22 days left</span>
+                <span class="job-type">Internship</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">IFS Sri Lanka</p>
+            <h3>Software Engineer Intern</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 21 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 9 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Sampath Bank</p>
+            <h3>Banking Assistant</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Kurunegala, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 22 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 13 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Commercial Bank</p>
+            <h3>Trainee Associate</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Jaffna, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 23 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 27 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">SLT-Mobitel</p>
+            <h3>Network Engineer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 24 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 6 days left</span>
+                <span class="job-type">Part-Time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">Cargills Ceylon</p>
+            <h3>Store Supervisor</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Matara, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+        <!-- Card 25 -->
+        <div class="job-card">
+            <div class="top-row">
+                <span class="days"><i class="bi bi-clock"></i> 17 days left</span>
+                <span class="job-type">Full-time Job</span>
+            </div>
+            <img src="https://via.placeholder.com/80" alt="Company Logo">
+            <p class="company">LOLC Holdings</p>
+            <h3>Credit Officer</h3>
+            <p class="location"><i class="bi bi-geo-alt"></i> Anuradhapura, Sri Lanka</p>
+            <button>Apply Now</button>
+        </div>
+
+    </div>
+</div>
+</div>
 <footer><!-- Footer Start -->
 
 <div class="footer-container">

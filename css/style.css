@@ -28,13 +28,12 @@ body {
 .hero-contact {
     min-height: 10vh; /* Full viewport height for the contact page */
 }   
-
 .hero-login {
     min-height: 20vh; /* Full viewport height for the login page */
 }
-
-.hero-contact
-
+.hero-jobpost-form{
+    min-height: 40vh; /* Full viewport height for the job post form page */
+}
 /* 2. Update Navbar to be transparent */
 .navbar {
     background: transparent; /* Changed from #222 so the image shows through */
@@ -340,4 +339,4 @@ footer{
         gap:20px;
         flex-wrap:wrap;
     }
-
+}
