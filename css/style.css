@@ -1,0 +1,344 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* 1. Add the Hero Section for the background image */
+.hero-section {
+    /* Put the path to your actual image file inside the quotes below */
+    background-image: url('../images/banners/Main-navbar3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    /* Ensures the section covers at least the full height of the screen */
+    ; 
+}
+.hero-about {
+    min-height: 20vh; /* Full viewport height for the about page */
+}
+
+.hero-index {
+    min-height: 10vh; 
+}
+.hero-contact {
+    min-height: 10vh; /* Full viewport height for the contact page */
+}   
+
+.hero-login {
+    min-height: 20vh; /* Full viewport height for the login page */
+}
+
+.hero-contact
+
+/* 2. Update Navbar to be transparent */
+.navbar {
+    background: transparent; /* Changed from #222 so the image shows through */
+    padding: 25px 0; /* Slightly increased padding for a cleaner look */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end; /* Aligns items to the left, change to center if preferred */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* Adds space around the text */
+    border-radius: 20px; /* Rounds the corners perfectly */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Little hover effect for better user experience */
+}
+
+/* 3. Fix the Main Container margins */
+.main-container {
+    color: #ffffff;
+    width: 90%;
+    /* margin: top right bottom left */
+    /* This pushes the text down 80px, and centers it horizontally */
+    margin: 80px auto 0 auto; 
+}
+
+.head-2-1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-title{ /* New class for the home page title */ 
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6); 
+    margin: 0 auto;
+   
+}
+
+.home-subtitle {
+    font-size: 1.25rem; 
+    color: #f0f0f0; 
+    font-weight: 400; 
+    margin-bottom: 30px; 
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6); 
+    max-width: 650px; 
+    margin: 0 auto;
+    
+}
+
+
+
+
+/* Footer */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+footer{
+    background:#00133a;
+    color:white;
+    padding:60px 8%;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* Left Side */
+
+.footer-left{
+    flex:1;
+    min-width:350px;
+}
+
+.footer-left h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.footer-left h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.footer-left p{
+    font-size:14px;
+    color:#d6d6d6;
+    line-height:1.8;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+/* Subscribe Box */
+
+.subscribe-box{
+    background:#fff;
+    border-radius:15px;
+    display:flex;
+    overflow:hidden;
+    padding:15px;
+    max-width:700px;
+}
+
+.subscribe-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:16px;
+    padding:0 15px;
+}
+
+.subscribe-box button{
+    background:#52d017;
+    color:white;
+    border:none;
+    padding:15px 50px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.subscribe-box button:hover{
+    background:#3fb312;
+}
+
+/* Right Side */
+
+.footer-right{
+    flex:1;
+    min-width:500px;
+}
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    gap:35px;
+}
+
+.column{
+    min-width:180px;
+}
+
+.column h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.column ul{
+    list-style:none;
+}
+
+.column ul li{
+    margin-bottom:12px;
+}
+
+.column ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.column ul li a:hover{
+    color:#57d21f;
+}
+
+/* Contact Info */
+
+.contact-info{
+    margin-top:40px;
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:16px;
+}
+
+.contact-info i{
+    font-size:18px;
+}
+
+/* Social Icons */
+
+.social-icons{
+    margin-top:40px;
+    display:flex;
+    gap:25px;
+}
+
+.social-icons i{
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    color:#57d21f;
+}
+
+/* Copyright */
+
+.copyright{
+    margin-top:30px;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .footer-container{
+        flex-direction:column;
+    }
+
+    .links{
+        justify-content:flex-start;
+        gap:60px;
+        flex-wrap:wrap;
+    }
+
+}
+
+@media(max-width:768px){
+
+    footer{
+        padding:50px 25px;
+    }
+
+    .footer-left,
+    .footer-right{
+        min-width:100%;
+    }
+
+    .footer-left h1{
+        font-size:40px;
+    }
+
+    .footer-left h2{
+        font-size:24px;
+    }
+
+    .links{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .subscribe-box{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .subscribe-box input{
+        height:55px;
+    }
+
+    .subscribe-box button{
+        width:100%;
+        padding:16px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .social-icons{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/job-post.css">
+</head>
+<body>
+    <div class="job-form-container">
+        <div class="form-box">
+
+            <div class="form-header">
+                <span>Post a Job</span>
+            </div>
+            <br><br><br>
+        
+
+        <form id="Jobform">
+
+            <h2>Job Details</h2>
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" placeholder="Job Title" required>
+            <label for="application-email">Application Email</label>
+            <input type="email" id="application-email" placeholder="Application Email">
+            <label for="application-url">Application URL</label>
+            <input type="url" id="application-url" placeholder="Application URL">
+
+            <label for="job-region">Job Region</label>
+            <select id="job-region">
+                <option>Job Region</option>
+                <option>Local Jobs</option>
+                <option>Foreign Jobs</option>
+            </select>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Location">
+
+            <label for="job-type">Job Type</label>
+            <select id="job-type">
+                <option>Full Time</option>
+                <option>Part Time</option>
+                <option>Contract</option>
+                <option>Internship</option>
+                <option>Work From Home</option>
+            </select>
+            <label for="salary">Monthly Salary</label>
+            <select id="salary">
+                <option>Up to 25,000</option>
+                <option>25,000 - 50,000</option>
+                <option>50,000 - 100,000</option>
+                <option>100,000+</option>
+            </select>
+            <label for="job-category">Job Category</label>
+            <select id="job-category">
+                <option>Job Category</option>
+                <option>IT / Programming</option>
+                <option>Accounting</option>
+                <option>Marketing</option>
+                <option>Engineering</option>
+            </select>
+
+            <label>Suitable Candidate</label>
+
+            <div class="radio-group">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Any</label>
+            </div>
+
+            <textarea rows="8" placeholder="Job Description"></textarea>
+
+            <input type="file">
+
+            <h2>Company Details</h2>
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" placeholder="Company Name">
+
+            <textarea rows="5" placeholder="Company Description"></textarea>
+            <label for="company-website">Company Website</label>
+            <input type="url" placeholder="Website">
+
+            <input type="file">
+
+            <button type="submit" class="btn-submit">Submit Job</button>
+
+        </form>
+
+    </div>
+    </div>
+</body>
+</html>
