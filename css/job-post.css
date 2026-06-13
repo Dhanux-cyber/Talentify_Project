@@ -5,10 +5,15 @@
     margin-top: 0;
     height: fit-content;
     margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
 
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
     
+}
+.post.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 .container-title{
     color: black ;
@@ -40,13 +45,15 @@
     border-radius:5px;
     font-weight:bold;
     font-size:18px;
-    transition:0.3s;
+    transition:all 0.3s ease;
 }
 
 .post-btn:hover{
     background:#1F3E2E;
     color:#fff;
+    transform:scale(1.08);
 }
+
 .job-guide{
     max-width: 850px;
     width: 80%;
