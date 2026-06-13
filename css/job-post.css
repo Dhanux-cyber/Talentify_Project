@@ -1,0 +1,163 @@
+
+.post{
+    
+    position:relative;
+    margin-top: 70px;
+    height: fit-content;
+    margin-bottom: 500px;
+    
+}
+.container-title{
+    color: black ;
+    position:absolute;
+    right: 0%;
+    top: 50%;
+    max-width:800px;
+    width:90%;
+    margin:auto;
+}
+.container-title h1{
+    font-size:55px;
+    margin-bottom:25px;
+    line-height:1.2;
+    margin-top:10px;
+}
+.container-title p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+    
+}
+.post-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#57d21f;
+    color:white;
+    padding:18px 35px;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.post-btn:hover{
+    background:#1F3E2E;
+    color:#fff;
+}
+
+#Jobform {
+  display: flex;
+  flex-direction: column; 
+  gap: 15px;              
+  max-width: 550px;      
+  margin: 0 auto; 
+}
+          /* Centers the form */
+
+.job-form-container{
+    background-image: url('../images/jobimages/form.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+    
+
+.form-box{
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    backdrop-filter: blur(25px);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 50px;
+    color: #ffffff;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2)
+}
+.form-header{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 220px;
+    height: 80px;
+    border-radius: 0 0 20px 20px;
+}
+.form-header span{
+    font-size: 40px;
+    color:  #000000;
+    font-family: CG Omega;
+    font-weight: 200px;
+    
+    
+}
+input, select, textarea {
+  /*padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+  color: beige;
+  padding-inline: 20px 50px;
+  border: 2px solid white;
+  outline: none;*/
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 17px;
+    outline: none;
+    transition: .4s;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    border-color: #6d8fa3;
+    box-shadow: 0 0 15px #6d8fa3;
+}
+.btn-submit{
+    display:inline-block;
+    text-decoration:none;
+    background:white;
+    color: black;
+    padding:18px 35px;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:18px;
+    transition:0.3s;
+    
+}
+.btn-submit:hover{
+    transform: translateY(-5px);
+    background:#2f3d4d;
+}
+::placeholder{
+    color: rgba(255,255,255,0.8);
+}
+#Jobform label{
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.job-form-container h1{
+     font-size: 60px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    
+}
