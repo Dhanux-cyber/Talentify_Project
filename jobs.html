@@ -1,601 +1,594 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-</head>
-<body>
-    <style>
-        *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/jobs.css">
+        
+    </head>
+    <body>
 
-body{
-    background:#f5f3ef;
+        <script src="js/script.js"></script>
+        <header class="hero-section hero-jobs">
+                <!-- Navigation Bar Start -->
+    <nav class="navbar">
+            <div class="container">
 
-}
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Job Listings</a></li>
+                    <li><a href="job-post.html">Post a Job</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul> 
 
-.container{
-    max-width:1200px;
-    margin:auto;
-}
+                
+                
+            </div>
+                <!-- Navigation Bar End -->
+    </nav>
+        </header>
 
-h2{
-    margin-bottom:30px;
-    color:#333;
-}
+        
+        
+                <!-- Search Bar -->
+    <div class="hero-container">
+        
+        <div class="hero-text-section">
+        <h1 class="hero-title">Your job search starts here</h1>
+        <p class="hero-subtitle">Find the role that’s right for you.</p>
 
-h2 span{
-    font-weight:bold;
-}
-
-.job-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:30px;
-}
-
-.job-card{
-    background:#fff;
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.job-card:hover{
-    transform:translateY(-5px);
-}
-
-.top-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:25px;
-}
-
-.days{
-    font-size:14px;
-    color:#666;
-}
-
-.job-type{
-    background:#dff8f6;
-    color:#008b8b;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:13px;
-}
-
-.job-card img{
-    width:80px;
-    height:80px;
-    object-fit:contain;
-    margin-bottom:15px;
-}
-
-.company{
-    color:#888;
-    margin-bottom:8px;
-}
-
-.job-card h3{
-    font-size:24px;
-    margin-bottom:12px;
-    color:#111;
-}
-
-.location{
-    color:#777;
-    margin-bottom:25px;
-}
-
-button{
-    background:white;
-    color:#ff6b3d;
-    border:2px solid #ff6b3d;
-    padding:12px 30px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:15px;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#ff6b3d;
-    color:white;
-}
-    </style>
-    <script src="js/script.js"></script>
-    <header class="hero-section">
-             <!-- Navigation Bar Start -->
-<nav class="navbar">
-         <div class="container">
-
-        <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Job Listings</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul> 
-
+        <form class="search-bar">
             
-             
+            <div class="search-column">
+            <input type="text" placeholder="I'm looking for..." required>
+            </div>
+
+            <div class="search-column">
+            <select required>
+                <option value="" disabled selected>JOB Category</option>
+                <option value="tech">Technology & Software</option>
+                <option value="design">Design & Creative</option>
+                <option value="marketing">Marketing & Sales</option>
+                <option value="finance">Finance & Business</option>
+            </select>
+            </div>
+
+            <div class="search-column">
+            <select required>
+                <option value="" disabled selected>Location</option>
+                <option value="remote">Remote</option>
+                <option value="new-york">Colombo</option>
+                <option value="san-francisco">Kandy</option>
+                <option value="london">Galle</option>
+            </select>
+            </div>
+
+            <button type="submit" class="search-button">Search</button>
+            
+        </form>
         </div>
-            <!-- Navigation Bar End -->
-</nav>
-    </header>
 
-<div class="container">
-    <h2><span>42</span> Vacancies Found</h2>
+        <div class="hero-image-section">
+        <img src="images/banners/jobs image.png" alt="Job Search Illustration">
+        </div>
 
-    <div class="job-grid">
+    </div>
+
+    <div class="jobs-container">
+    <h2>Featured Jobs</h2>
+
+    <div class="row g-4">
 
         <!-- Card 1 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
-                <span class="job-type">Part-Time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                    <span class="job-type">Part-Time Job</span>
+                </div>
+                <img src="images\companies\Leap Yard.png" alt="Company Logo">
+                <p class="company">Leap Yard</p>
+                <h3>Junior Cybersecurity Analyst</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Wellawatte, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="images\jobimages\UXUI Designer.jpeg" alt="Company Logo">
-            <p class="company">Leap Yard</p>
-            <h3>UX/UI Designer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Wellawatte, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 2 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Astroid SL.png" alt="Company Logo">
+                <p class="company">Astroid SL</p>
+                <h3>Sales Representative</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Astroid SL</p>
-            <h3>Sales Representative</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 3 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 29 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Colors & Shades.jpeg" alt="Company Logo">
+                <p class="company">Colors & Shades</p>
+                <h3>Assistant Site Engineer/Trainee</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Colors & Shades</p>
-            <h3>Assistant Site Engineer/Trainee</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 4 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 14 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 14 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Colors & Shades.jpeg" alt="Company Logo">
+                <p class="company">Colors & Shades</p>
+                <h3>Marketing Executive</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Colors & Shades</p>
-            <h3>Marketing Executive</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 5 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 5 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 5 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Techcorp.jpeg" alt="Company Logo">
+                <p class="company">Techcorp</p>
+                <h3>Software Engineer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Kandy, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Techcorp</p>
-            <h3>Software Engineer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Kandy, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 6 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 21 days left</span>
-                <span class="job-type">Remote Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 21 days left</span>
+                    <span class="job-type">Remote Job</span>
+                </div>
+                <img src="images\companies\Virtusa.jpeg" alt="Company Logo">
+                <p class="company">Virtusa</p>
+                <h3>QA Engineer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Virtusa</p>
-            <h3>QA Engineer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 7 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 10 days left</span>
-                <span class="job-type">Internship</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 10 days left</span>
+                    <span class="job-type">Internship</span>
+                </div>
+                <img src="images\companies\WSO2.png" alt="Company Logo">
+                <p class="company">WSO2</p>
+                <h3>Business Analyst Intern</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">WSO2</p>
-            <h3>Business Analyst Intern</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 8 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 12 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 12 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Sysco LABS.png" alt="Company Logo">
+                <p class="company">Sysco LABS</p>
+                <h3>DevOps Engineer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Malabe, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Sysco LABS</p>
-            <h3>DevOps Engineer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Malabe, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 9 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 30 days left</span>
-                <span class="job-type">Part-Time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 30 days left</span>
+                    <span class="job-type">Part-Time Job</span>
+                </div>
+                <img src="images\companies\Axiata Digital.jpeg" alt="Company Logo">
+                <p class="company">Axiata Digital</p>
+                <h3>Graphic Designer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Axiata Digital</p>
-            <h3>Graphic Designer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 10 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 8 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 8 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Dialog Axiata.png" alt="Company Logo">
+                <p class="company">Dialog Axiata</p>
+                <h3>Customer Care Executive</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Gampaha, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Dialog Axiata</p>
-            <h3>Customer Care Executive</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Gampaha, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 11 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 15 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 15 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Brandix.png" alt="Company Logo">
+                <p class="company">Brandix</p>
+                <h3>HR Executive</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Ratnapura, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Brandix</p>
-            <h3>HR Executive</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Ratnapura, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 12 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 18 days left</span>
-                <span class="job-type">Contract</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 18 days left</span>
+                    <span class="job-type">Contract</span>
+                </div>
+                <img src="images\companies\MAS Holdings.jpeg" alt="Company Logo">
+                <p class="company">MAS Holdings</p>
+                <h3>Merchandiser</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Katunayake, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">MAS Holdings</p>
-            <h3>Merchandiser</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Katunayake, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 13 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 25 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 25 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\John Keells.png" alt="Company Logo">
+                <p class="company">John Keells</p>
+                <h3>Accounts Assistant</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">John Keells</p>
-            <h3>Accounts Assistant</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 14 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 4 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 4 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Hayleys PLC.png" alt="Company Logo">
+                <p class="company">Hayleys PLC</p>
+                <h3>Logistics Officer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Negombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Hayleys PLC</p>
-            <h3>Logistics Officer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Negombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 15 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 20 days left</span>
-                <span class="job-type">Part-Time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 20 days left</span>
+                    <span class="job-type">Part-Time Job</span>
+                </div>
+                <img src="images\companies\Zone24x7.jpeg" alt="Company Logo">
+                <p class="company">Zone24x7</p>
+                <h3>Content Writer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Zone24x7</p>
-            <h3>Content Writer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 16 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 7 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 7 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\99x.png" alt="Company Logo">
+                <p class="company">99x</p>
+                <h3>Frontend Developer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">99x</p>
-            <h3>Frontend Developer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 17 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 11 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 11 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Aitken Spence.jpeg" alt="Company Logo">
+                <p class="company">Aitken Spence</p>
+                <h3>Travel Consultant</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Galle, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Aitken Spence</p>
-            <h3>Travel Consultant</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Galle, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 18 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 16 days left</span>
-                <span class="job-type">Remote Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 16 days left</span>
+                    <span class="job-type">Remote Job</span>
+                </div>
+                <img src="images\companies\Codegen.png" alt="Company Logo">
+                <p class="company">Codegen</p>
+                <h3>UI/UX Engineer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Codegen</p>
-            <h3>UI/UX Engineer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 19 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 3 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 3 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Hemas Holdings.jpeg" alt="Company Logo">
+                <p class="company">Hemas Holdings</p>
+                <h3>Brand Manager</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Hemas Holdings</p>
-            <h3>Brand Manager</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 20 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 22 days left</span>
-                <span class="job-type">Internship</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 22 days left</span>
+                    <span class="job-type">Internship</span>
+                </div>
+                <img src="images\companies\IFS Sri Lanka.jpeg" alt="Company Logo">
+                <p class="company">IFS Sri Lanka</p>
+                <h3>Software Engineer Intern</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">IFS Sri Lanka</p>
-            <h3>Software Engineer Intern</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 21 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 9 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 9 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Sampath Bank.png" alt="Company Logo">
+                <p class="company">Sampath Bank</p>
+                <h3>Banking Assistant</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Kurunegala, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Sampath Bank</p>
-            <h3>Banking Assistant</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Kurunegala, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 22 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 13 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 13 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\Commercial Bank.png" alt="Company Logo">
+                <p class="company">Commercial Bank</p>
+                <h3>Trainee Associate</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Jaffna, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Commercial Bank</p>
-            <h3>Trainee Associate</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Jaffna, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 23 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 27 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 27 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\SLT-Mobitel.png" alt="Company Logo">
+                <p class="company">SLT-Mobitel</p>
+                <h3>Network Engineer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">SLT-Mobitel</p>
-            <h3>Network Engineer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Colombo, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 24 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 6 days left</span>
-                <span class="job-type">Part-Time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 6 days left</span>
+                    <span class="job-type">Part-Time Job</span>
+                </div>
+                <img src="images\companies\Cargills Ceylon.png" alt="Company Logo">
+                <p class="company">Cargills Ceylon</p>
+                <h3>Store Supervisor</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Matara, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">Cargills Ceylon</p>
-            <h3>Store Supervisor</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Matara, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
         <!-- Card 25 -->
-        <div class="job-card">
-            <div class="top-row">
-                <span class="days"><i class="bi bi-clock"></i> 17 days left</span>
-                <span class="job-type">Full-time Job</span>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="job-card">
+                <div class="top-row">
+                    <span class="days"><i class="bi bi-clock"></i> 17 days left</span>
+                    <span class="job-type">Full-time Job</span>
+                </div>
+                <img src="images\companies\LOLC Holdings.png" alt="Company Logo">
+                <p class="company">LOLC Holdings</p>
+                <h3>Credit Officer</h3>
+                <p class="location"><i class="bi bi-geo-alt"></i> Anuradhapura, Sri Lanka</p>
+                <button>Apply Now</button>
             </div>
-            <img src="https://via.placeholder.com/80" alt="Company Logo">
-            <p class="company">LOLC Holdings</p>
-            <h3>Credit Officer</h3>
-            <p class="location"><i class="bi bi-geo-alt"></i> Anuradhapura, Sri Lanka</p>
-            <button>Apply Now</button>
         </div>
 
     </div>
 </div>
-</div>
-<footer><!-- Footer Start -->
+    <footer><!-- Footer Start -->
 
-<div class="footer-container">
+    <div class="footer-container">
 
-    
-    <div class="footer-left">
+        
+        <div class="footer-left">
 
-        <h1>Jobs</h1>
+            <h1>Jobs</h1>
 
-        <h2>Newsletters</h2>
+            <h2>Newsletters</h2>
 
-        <p>
-            Subscribe to our newsletter and receive an email alert
-            on the most matching jobs every Wednesday.
-        </p>
+            <p>
+                Subscribe to our newsletter and receive an email alert
+                on the most matching jobs every Wednesday.
+            </p>
 
-        <div class="subscribe-box">
+            <div class="subscribe-box">
 
-            <input type="email" placeholder="Enter your email...">
+                <input type="email" placeholder="Enter your email...">
 
-            <button>SUBSCRIBE</button>
+                <button>SUBSCRIBE</button>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="footer-right">
+
+            <div class="links">
+
+                <div class="column">
+
+                    <h3>Job Seeker</h3>
+
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">CV-Less Jobs</a></li>
+                        <li><a href="#">CV Formats Store</a></li>
+                        <li><a href="#">Online Courses</a></li>
+                        <li><a href="#">Book a Mentor</a></li>
+                        <li><a href="#">Try Premium</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="column">
+
+                    <h3>Recruiters</h3>
+
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="column">
+
+                    <h3>Support</h3>
+
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Differently-Abled Employment</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-info">
+
+                <div>
+                    <i class="fa-solid fa-location-arrow"></i>
+                    417/B, Temple Lane, Colombo 06, Sri Lanka
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    011-2345678
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@jobs.jobs
+                </div>
+
+            </div>
+
+
+            <div class="social-icons">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+
+
+            <div class="copyright">
+                © 2026 Jobs.lk (Pvt) Ltd. All Rights Reserved
+            </div>
 
         </div>
 
     </div>
 
+    </footer>
 
-    
-    <div class="footer-right">
-
-        <div class="links">
-
-            <div class="column">
-
-                <h3>Job Seeker</h3>
-
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">CV-Less Jobs</a></li>
-                    <li><a href="#">CV Formats Store</a></li>
-                    <li><a href="#">Online Courses</a></li>
-                    <li><a href="#">Book a Mentor</a></li>
-                    <li><a href="#">Try Premium</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="column">
-
-                <h3>Recruiters</h3>
-
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Features</a></li>
-                </ul>
-
-            </div>
-
-
-            <div class="column">
-
-                <h3>Support</h3>
-
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Differently-Abled Employment</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-
-            </div>
-
-        </div>
-
-
-        <div class="contact-info">
-
-            <div>
-                <i class="fa-solid fa-location-arrow"></i>
-                417/B, Temple Lane, Colombo 06, Sri Lanka
-            </div>
-
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                011-2345678
-            </div>
-
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-                info@jobs.jobs
-            </div>
-
-        </div>
-
-
-        <div class="social-icons">
-
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-whatsapp"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-x-twitter"></i>
-            <i class="fa-brands fa-youtube"></i>
-
-        </div>
-
-
-        <div class="copyright">
-            © 2026 Jobs.lk (Pvt) Ltd. All Rights Reserved
-        </div>
-
-    </div>
-
-</div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>        
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>        
+    </body>
+    </html>

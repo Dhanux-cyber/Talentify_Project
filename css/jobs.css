@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f7f6;
+  color: #333333;
+}
+
+/* --- Combined Container Rules --- */
+.hero-container,
+.jobs-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 50px;
+}
+
+.jobs-container {
+  padding-bottom: 60px;
+}
+/* -------------------------------- */
+
+.hero-text-section {
+  flex: 2;
+}
+
+.hero-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-section img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.hero-title {
+  color: #0c167c;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero-subtitle {
+  color: #474a57;
+  font-size: 1.4rem;
+  margin-bottom: 35px;
+}
+
+.search-bar {
+  display: flex;
+  background-color: #ffffff62;
+  border-radius: 50px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  width: 100%;
+}
+
+.search-column {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 15px;
+  border-right: 1px solid #dcdde1;
+}
+
+.search-column:last-of-type {
+  border-right: none;
+}
+
+.search-column input,
+.search-column select {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  padding: 10px 0;
+}
+
+.search-column select {
+  cursor: pointer;
+}
+
+.search-button {
+  background-color: #0faaaf;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #0a7a71;
+}
+
+/* Fixed the selector to target the correct h2 */
+.jobs-container h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.job-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.days {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.job-type {
+  background: #e8f5e9;
+  color: #00875a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.job-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.company {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.job-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.location {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.job-card button {
+  background: white;
+  color: #25beda;
+  border: 2px solid #25beda;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.job-card button:hover {
+  background: #25beda;
+  color: white;
+}

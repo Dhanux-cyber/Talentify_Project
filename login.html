@@ -3,70 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CareerHub - Login & Register</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            position: relative;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        
-        header.hero-section {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-            display: block;
-        }
-
-        
-        nav.navbar {
-            padding-top: 25px !important;
-            padding-bottom: 25px !important;
-        }
-
-        
-        .container.d-flex {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            background-image: url('images/banners/grey.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 80vh;
-            padding: 40px 0;
-            max-width: 100% !important;
-        }
-
-        
-        footer {
-            display: block;
-            width: 100%;
-            margin-top: 0 !important;
-        }
-    </style>
 </head>
 
 <body>
 
-    
-    <header class="hero-section">
+    <header class="hero-section hero-login">
         <nav class="navbar">
             <div class="container">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="jobs.html">Job Listings</a></li>
+                    <li><a href="job-post.html">Post a Job</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="login.html">Login</a></li>
@@ -75,7 +29,7 @@
         </nav>
     </header>
 
-    <div class="container d-flex justify-content-center align-items-center my-5">
+    <div class="container-fluid login-bg-container d-flex justify-content-center align-items-center">
         
         <div class="form-container-card" id="formWrapper">
 
@@ -86,7 +40,6 @@
 
             <div class="form-content-area">
 
-                
                 <div id="loginSection">
                     <h3 class="form-main-title">Job Seeker Login</h3>
                     <form id="loginForm">
@@ -100,15 +53,14 @@
                         <div class="action-row">
                             <span class="small-label">Forgot Password ?</span>
                             <button type="button" class="btn-outline-blue">Reset Now</button>
-                        </div><br>
-                        <button type="submit" class="btn-solid-green">Login</button>
+                        </div>
+                        <button type="submit" class="btn-solid-green mt-2">Login</button>
                     </form>
                     <div class="switch-text">
                         Don't have an account? <a href="javascript:void(0)" onclick="switchForm('register')">Register Now</a>
                     </div>
                 </div>
 
-                
                 <div id="registerSection" style="display: none;">
                     <h3 class="form-main-title">Job Seeker Register</h3>
                     <form id="registerForm">
@@ -153,7 +105,7 @@
                             </div>
                         </div>
 
-                        <div class="cv-upload-box mb-1">
+                        <div class="cv-upload-box mb-3">
                             <label for="cvFile" class="d-flex justify-content-between align-items-center w-100" style="cursor: pointer;">
                                 <span class="small-label" style="color: slategray;">CV *</span>
                                 <i class="fa-solid fa-upload"></i>
@@ -175,31 +127,26 @@
                                 </div>
                             </div>
                         </div>
-
                         
                         <div class="row align-items-center">
-                            <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="col-12 mb-3 mb-md-0">
                                 <button type="submit" class="btn-solid-green">REGISTER</button>
                             </div>
                         </div>
 
                     </form>
 
-                    <div class="switch-text mt-4">
+                    <div class="switch-text mt-3">
                         Already have an account? <a href="javascript:void(0)" onclick="switchForm('login')">Login Now</a>
                     </div>
                 </div>
 
-                <div class="bottom-divider"></div>
             </div>
         </div>
     </div>
 
-
     <footer>
-        <!-- Footer Start -->
         <div class="footer-container">
-
             <div class="footer-left">
                 <h1>Jobs</h1>
                 <h2>Newsletters</h2>
@@ -279,12 +226,9 @@
                     © 2026 Jobs.lk (Pvt) Ltd. All Rights Reserved
                 </div>
             </div>
-
         </div>
-        <!-- Footer End -->
-    </footer>
+        </footer>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/login.js"></script>
