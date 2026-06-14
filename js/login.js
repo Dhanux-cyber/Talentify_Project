@@ -1,3 +1,5 @@
+
+// loging page 
 function switchForm(formType) {
             const wrapper = document.getElementById('formWrapper');
             const loginSec = document.getElementById('loginSection');

@@ -1,22 +1,11 @@
+
+// Nav Bar Effect
 document.querySelectorAll(".nav-link").forEach(link => {
     if (link.href === window.location.href) {
         link.classList.add("active");
     }
 });
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // This finds every button that lives inside a "job-card" div
-    const applyButtons = document.querySelectorAll('.job-card button');
 
-    // This loops through all the buttons it found and adds the click event
-    applyButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault(); // Stops the page from jumping or refreshing
-            alert('Jobs coming soon!');
-        });
-    });
-
-});
 
 
 // submitButton
@@ -47,3 +36,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+
+
+
+// Date validation for jobs.html
+
+const images = [
+    "images/banners/Nav-background3.jpeg",
+    "images/banners/Nav-background1.jpg",
+    "images/banners/Nav-background2.jpg"
+];
+
+
+let current = 0;
+
+setInterval(() => {
+    current = (current + 1) % images.length;
+
+    document.querySelector(".hero-section").style.backgroundImage =
+        `url('${images[current]}')`;
+
+},3000);

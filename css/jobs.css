@@ -200,3 +200,14 @@ body {
   background: #25beda;
   color: white;
 }
+
+/* --- Company logo --- */
+.job-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  padding: 5px;
+  background: white;
+}

@@ -15,7 +15,7 @@ body{
 .f1 h1{
     font-size:80px;
     line-height:1;
-    font-family: Georgia, serif;
+    font-family: Arial;
     margin-bottom: 60px;
     font-weight:bold;
     text-align: center;
@@ -132,20 +132,7 @@ p {
     margin-right: 40px;
 }
 
-.image-container img{
-    width:400px;
-    border-radius: 10px;
-    margin: 40px 40px 100px 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-img:hover {
-  transform: translateY(-10px); /* moves image up slightly */
-}
-
-
-button{
+/* button{
     background:#52d017;
     color:white;
     border:none;
@@ -160,4 +147,30 @@ button{
 
 button:hover{
     background:#3fb312;
+} */
+.hhhh,
+.section2{
+    opacity: 0;
+    transition: 1s;
 }
+
+.show{
+    opacity: 1;
+}
+
+.image-container video {
+    max-width: 100%; 
+    width: 500px;    
+    height: auto;
+    border-radius: 20px;
+}
+.image-container video {
+    width: 600px;
+    height: auto;
+    border-radius: 10px; 
+    display: block;
+    margin: 0 auto; 
+    transform: translateY(-10px);
+}
+
+

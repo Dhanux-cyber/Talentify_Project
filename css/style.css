@@ -6,53 +6,53 @@ body {
     overflow-x: hidden;
 }
 
-/* 1. Add the Hero Section for the background image */
+/* Nav bar image */
 .hero-section {
-    /* Put the path to your actual image file inside the quotes below */
-    background-image: url('../images/banners/pexels-giang-le-329895179-13845352.jpg');
+    
+    background-image: url('...images/banners/Nav-background3.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    
-    /* Ensures the section covers at least the full height of the screen */
 }
+    
 
 .hero-about {
-    min-height: 28vh;
-    margin: auto; /* Full viewport height for the about page */
+    min-height: 38vh;
 }
+
 .hero-jobs {
-    min-height: 28vh; /* Full viewport height for the jobs page */
+    min-height: 38vh; 
 }
 
 .hero-jobpost {
-    min-height: 28vh; /* Full viewport height for the job post page */
+    min-height: 38vh; 
+    
 }
 
 .hero-index {
     min-height: 10vh; 
 }
 .hero-contact {
-    min-height: 28vh; /* Full viewport height for the contact page */
+    min-height: 38vh;
 }   
 .hero-login {
-    min-height: 28vh; /* Full viewport height for the login page */
+    min-height: 38vh; 
 }
+
+
 .hero-jobpost-form{
-    min-height: 40vh; /* Full viewport height for the job post form page */
+    min-height: 38vh; 
 }
-/* 2. Update Navbar to be transparent */
+/* nav bar selection */
 .navbar {
-    background: transparent; /* Changed from #222 so the image shows through */
-    padding: 25px 0; /* Slightly increased padding for a cleaner look */
-}
+    background: transparent; 
+    padding: 25px 0; }
 
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: flex-end; /* Aligns items to the left, change to center if preferred */
+    justify-content: flex-end;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -62,21 +62,19 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px; /* Adds space around the text */
-    border-radius: 20px; /* Rounds the corners perfectly */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    padding: 8px 15px; 
+    border-radius: 20px;
+    transition: background-color 0.3s ease; 
 }
 
 .navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Little hover effect for better user experience */
+    background-color: rgba(255, 255, 255, 0.2); 
 }
 
 /* 3. Fix the Main Container margins */
 .main-container {
     color: #ffffff;
     width: 90%;
-    /* margin: top right bottom left */
-    /* This pushes the text down 80px, and centers it horizontally */
     margin: 80px auto 0 auto; 
 }
 
@@ -85,7 +83,7 @@ body {
     margin-bottom: 20px;
 }
 
-.home-title{ /* New class for the home page title */ 
+.home-title{ 
     font-size: 3.5rem;
     font-weight: 700;
     color: #ffffff;
@@ -284,67 +282,3 @@ footer{
     color:#ddd;
 }
 
-/* Responsive */
-
-@media(max-width:1200px){
-
-    .footer-container{
-        flex-direction:column;
-    }
-
-    .links{
-        justify-content:flex-start;
-        gap:60px;
-        flex-wrap:wrap;
-    }
-
-}
-
-@media(max-width:768px){
-
-    footer{
-        padding:50px 25px;
-    }
-
-    .footer-left,
-    .footer-right{
-        min-width:100%;
-    }
-
-    .footer-left h1{
-        font-size:40px;
-    }
-
-    .footer-left h2{
-        font-size:24px;
-    }
-
-    .links{
-        flex-direction:column;
-        gap:30px;
-    }
-
-    .subscribe-box{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .subscribe-box input{
-        height:55px;
-    }
-
-    .subscribe-box button{
-        width:100%;
-        padding:16px;
-    }
-
-    .contact-info{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .social-icons{
-        gap:20px;
-        flex-wrap:wrap;
-    }
-}
