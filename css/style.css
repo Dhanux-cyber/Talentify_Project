@@ -8,12 +8,14 @@ body {
 
 /* Nav bar image */
 .hero-section {
-    
-    background-image: url('...images/banners/Nav-background3.jpeg');
+    background-color: #00133a; /* Dark blue background - add this! */
+    background-image: url('../images/banners/Nav-background3.jpeg'); /* Make sure the path is correct */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 350px; /* Ensure your hero section has a defined height */
 }
+
     
 
 .hero-about {

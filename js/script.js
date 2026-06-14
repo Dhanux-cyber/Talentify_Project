@@ -57,4 +57,4 @@ setInterval(() => {
     document.querySelector(".hero-section").style.backgroundImage =
         `url('${images[current]}')`;
 
-},3000);
+},20000);
